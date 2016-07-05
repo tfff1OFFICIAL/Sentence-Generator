@@ -1,9 +1,9 @@
-var start = ["a", "b", "c", "d", "e"];
-var end = ["a", "b", "c", "d", "e"];
+var start = ["Eat", "Lick", "Magic", "Murder", "Explode", "Edit", "Burn", "Play", "Get"];
+var end = ["Bobby", "chocolate", "table", "cup", "tower", "building", "lemon", "pineapple", "game", "Dwarf Fortress", "life", "democracy"];
 
 function generateSentence() {
     var element = document.getElementById("generatedSentence");
-    element.innerHTML = start[randomNumber()].toString() + " " + end[randomNumber()].toString() + "<br>";
+    element.innerHTML = start[randomNumber()].toString() + " a " + end[randomNumber()].toString() + ".<br>";
 }
 
 function randomNumber() {
