@@ -1,13 +1,19 @@
 var start = ["Eat", "Lick", "Magic", "Murder", "Explode", "Edit", "Burn", "Play", "Get"];
-var end = ["Bobby", "chocolate", "table", "cup", "tower", "building", "lemon", "pineapple", "game", "Dwarf Fortress", "life", "democracy"];
+var end = ["that Bobby", "a chocolate", "a table", "a cup", "a tower", "a building", "a lemon", "a pineapple", "a game", "some Dwarf Fortress", "some dwarf", "a life", "a democracy", "some eyebrows"];
 
 function generateSentence() {
     var element = document.getElementById("generatedSentence");
-    element.innerHTML = start[randomNumber()].toString() + " a " + end[randomNumber()].toString() + ".<br>";
+    element.innerHTML = start[randomNumber("start")].toString() + " " + end[randomNumber("end")].toString() + ".<br>";
 }
 
-function randomNumber() {
-    var max = start.length - 1;
+function randomNumber(type) {
+    var max
+    if (type == "start") {
+        max = start.length - 1;
+    }
+    else if (type == "end") {
+        max = end.length - 1;
+    }
     var min = 0;
            
     var Number = Math.floor(Math.random()*(max-min+1)+min);
